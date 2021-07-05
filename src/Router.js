@@ -11,8 +11,7 @@ class RouterComp extends Component {
                 <Stack.Navigator name = "authStack" initialRouteName = "main" >
                     <Stack.Screen name = "main" options = {{headerShown: false}} component = {Main}></Stack.Screen>
                 </Stack.Navigator>
-            </NavigationContainer>
-            
+            </NavigationContainer>  
         )
     }
 }

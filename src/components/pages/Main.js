@@ -26,19 +26,15 @@ class Main extends Component {
     constructor(props) {
         super(props);
     }
-    locationsRenderItem = () => {
-      return(
-        locations.map((item) => {
-            return(
-                <View style = {styles.cardWrapper}>
-                    <Image style = {styles.cardImage}
-                           resizeMode = "cover"
-                           source = {{uri:item.uri}}>
-                    </Image>
-                </View>    
-            )
-        })
-      )    
+    locationsRenderItem = ({ item }) => {
+        return(
+            <View style = {styles.cardWrapper}>
+                <Image style = {styles.cardImage}
+                        resizeMode = "cover"
+                        source = {{uri:item.uri}}>
+                </Image>
+            </View>    
+        )
     }
     onViewableItemsChanged = ({ viewableItems, changed }) => {
        changed.map(changedData => {
